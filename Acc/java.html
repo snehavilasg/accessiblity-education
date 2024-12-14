@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Java Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #4CAF50;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Basic Java Operations</h1>
+        </header>
+
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#operations">Basic Operations</a>
+            <a href="#variables">Variables</a>
+            <a href="#loops">Loops</a>
+            <a href="#methods">Methods</a>
+        </nav>
+
+        <!-- Introduction Section -->
+        <section id="intro">
+            <h2>Introduction to Java</h2>
+            <p>Java is a popular, high-level programming language known for its platform independence, meaning Java programs can run on any system with a Java Virtual Machine (JVM) installed. It is widely used for building applications, web servers, mobile apps, and more. This page introduces basic operations in Java.</p>
+        </section>
+
+        <!-- Basic Operations Section -->
+        <section id="operations">
+            <h2>Basic Java Operations</h2>
+            <p>In Java, you can perform arithmetic, comparison, and logical operations. Here are examples:</p>
+
+            <pre>
+/* Arithmetic Operations */
+int x = 10;
+int y = 5;
+System.out.println(x + y); // Output: 15
+System.out.println(x - y); // Output: 5
+System.out.println(x * y); // Output: 50
+System.out.println(x / y); // Output: 2
+System.out.println(x % y); // Output: 0
+
+/* Comparison Operations */
+System.out.println(x == y);  // Output: false
+System.out.println(x != y);  // Output: true
+System.out.println(x > y);   // Output: true
+System.out.println(x < y);   // Output: false
+
+/* Logical Operations */
+System.out.println(x > 5 && y < 10);  // Output: true
+System.out.println(x > 5 || y < 3);   // Output: true
+System.out.println(!(x > 5));          // Output: false
+            </pre>
+        </section>
+
+        <!-- Variables Section -->
+        <section id="variables">
+            <h2>Variables in Java</h2>
+            <p>In Java, variables are containers for storing data values. Java is a statically typed language, meaning you need to declare the type of a variable before using it. Here are examples of variables:</p>
+
+            <pre>
+/* Declaring Variables */
+int age = 25; // Integer variable
+double height = 5.9; // Double variable
+char grade = 'A'; // Character variable
+boolean isJavaFun = true; // Boolean variable
+
+/* Printing Variables */
+System.out.println("Age: " + age);         // Output: Age: 25
+System.out.println("Height: " + height);   // Output: Height: 5.9
+System.out.println("Grade: " + grade);     // Output: Grade: A
+System.out.println("Is Java Fun: " + isJavaFun); // Output: Is Java Fun: true
+            </pre>
+        </section>
+
+        <!-- Loops Section -->
+        <section id="loops">
+            <h2>Loops in Java</h2>
+            <p>Loops in Java are used to execute a block of code repeatedly based on a condition. Java supports several types of loops, including <code>for</code>, <code>while</code>, and <code>do-while</code> loops.</p>
+
+            <pre>
+/* For Loop Example */
+for (int i = 0; i < 5; i++) {
+    System.out.println("i = " + i); // Output: i = 0, 1, 2, 3, 4
+}
+
+/* While Loop Example */
+int j = 0;
+while (j < 5) {
+    System.out.println("j = " + j); // Output: j = 0, 1, 2, 3, 4
+    j++;
+}
+
+/* Do-While Loop Example */
+int k = 0;
+do {
+    System.out.println("k = " + k); // Output: k = 0, 1, 2, 3, 4
+    k++;
+} while (k < 5);
+            </pre>
+        </section>
+
+        <!-- Methods Section -->
+        <section id="methods">
+            <h2>Methods in Java</h2>
+            <p>A <strong>method</strong> in Java is a block of code that performs a specific task. It is used to define reusable pieces of logic. Below is an example of how to create and call methods in Java:</p>
+
+            <pre>
+/* Method Definition */
+public class Main {
+    // A method that adds two numbers
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        // Calling the addNumbers method
+        int result = addNumbers(10, 20);
+        System.out.println("Sum: " + result); // Output: Sum: 30
+    }
+}
+            </pre>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Java Basics</p>
+        </footer>
+    </div>
+
+</body>
+</html>

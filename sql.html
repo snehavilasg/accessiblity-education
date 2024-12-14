@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Basics for Learners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>SQL Basics for Learners</h1>
+        </header>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>What is SQL?</h2>
+            <p>SQL (Structured Query Language) is a standard language used to interact with databases. It allows you to perform tasks like querying data, inserting new records, updating existing data, and deleting records from a database.</p>
+        </section>
+
+        <!-- Basic SQL Syntax Section -->
+        <section>
+            <h2>Basic SQL Syntax</h2>
+            <p>SQL statements are used to perform tasks in a database. Here's a basic example of SQL syntax:</p>
+            <pre>
+-- SQL Statement to Retrieve Data
+SELECT * FROM employees;
+            </pre>
+            <p>This query selects all records from the <code>employees</code> table.</p>
+        </section>
+
+        <!-- SQL SELECT Statement Section -->
+        <section>
+            <h2>SQL SELECT Statement</h2>
+            <p>The <code>SELECT</code> statement is used to retrieve data from one or more tables. You can specify which columns to retrieve or use <code>*</code> to retrieve all columns.</p>
+            <pre>
+-- SQL Statement to Retrieve All Columns
+SELECT * FROM employees;
+
+-- SQL Statement to Retrieve Specific Columns
+SELECT first_name, last_name FROM employees;
+            </pre>
+            <p>The first query retrieves all columns from the <code>employees</code> table, while the second query only retrieves the <code>first_name</code> and <code>last_name</code> columns.</p>
+        </section>
+
+        <!-- SQL WHERE Clause Section -->
+        <section>
+            <h2>SQL WHERE Clause</h2>
+            <p>The <code>WHERE</code> clause is used to filter records based on specific conditions.</p>
+            <pre>
+-- SQL Statement with WHERE Clause
+SELECT * FROM employees WHERE department = 'Sales';
+            </pre>
+            <p>This query retrieves all records from the <code>employees</code> table where the <code>department</code> is 'Sales'.</p>
+        </section>
+
+        <!-- SQL INSERT INTO Statement Section -->
+        <section>
+            <h2>SQL INSERT INTO Statement</h2>
+            <p>The <code>INSERT INTO</code> statement is used to insert new records into a table.</p>
+            <pre>
+-- SQL Statement to Insert a New Record
+INSERT INTO employees (first_name, last_name, department)
+VALUES ('John', 'Doe', 'Marketing');
+            </pre>
+            <p>This query inserts a new record into the <code>employees</code> table with values for <code>first_name</code>, <code>last_name</code>, and <code>department</code>.</p>
+        </section>
+
+        <!-- SQL UPDATE Statement Section -->
+        <section>
+            <h2>SQL UPDATE Statement</h2>
+            <p>The <code>UPDATE</code> statement is used to modify existing records in a table.</p>
+            <pre>
+-- SQL Statement to Update a Record
+UPDATE employees
+SET department = 'HR'
+WHERE first_name = 'John' AND last_name = 'Doe';
+            </pre>
+            <p>This query updates the <code>department</code> of the employee with the name 'John Doe' to 'HR'.</p>
+        </section>
+
+        <!-- SQL DELETE Statement Section -->
+        <section>
+            <h2>SQL DELETE Statement</h2>
+            <p>The <code>DELETE</code> statement is used to delete existing records from a table.</p>
+            <pre>
+-- SQL Statement to Delete a Record
+DELETE FROM employees WHERE first_name = 'John' AND last_name = 'Doe';
+            </pre>
+            <p>This query deletes the record of the employee with the name 'John Doe'.</p>
+        </section>
+
+        <!-- SQL JOINS Section -->
+        <section>
+            <h2>SQL JOINS</h2>
+            <p>SQL Joins allow you to combine rows from two or more tables based on a related column. The most common types of joins are:</p>
+            
+            <h3>INNER JOIN</h3>
+            <pre>
+-- SQL INNER JOIN Example
+SELECT employees.first_name, employees.last_name, departments.department_name
+FROM employees
+INNER JOIN departments ON employees.department_id = departments.department_id;
+            </pre>
+            <p>This query retrieves the <code>first_name</code> and <code>last_name</code> from the <code>employees</code> table and the <code>department_name</code> from the <code>departments</code> table where the <code>department_id</code> matches in both tables.</p>
+        </section>
+
+        <!-- SQL ORDER BY Clause Section -->
+        <section>
+            <h2>SQL ORDER BY Clause</h2>
+            <p>The <code>ORDER BY</code> clause is used to sort the result set in either ascending (default) or descending order.</p>
+            <pre>
+-- SQL Statement to Order by Age (Ascending)
+SELECT * FROM employees ORDER BY age;
+
+-- SQL Statement to Order by Age (Descending)
+SELECT * FROM employees ORDER BY age DESC;
+            </pre>
+            <p>The first query orders employees by <code>age</code> in ascending order, while the second query orders them in descending order.</p>
+        </section>
+
+        <!-- SQL LIMIT Clause Section -->
+        <section>
+            <h2>SQL LIMIT Clause</h2>
+            <p>The <code>LIMIT</code> clause is used to specify the number of records to return in the result set.</p>
+            <pre>
+-- SQL Statement to Limit Results
+SELECT * FROM employees LIMIT 5;
+            </pre>
+            <p>This query retrieves only the first 5 records from the <code>employees</code> table.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 SQL Basics for Learners. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

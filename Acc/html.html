@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Tags for Learners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Basic HTML Tags for Learners</h1>
+        </header>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>Introduction to HTML</h2>
+            <p>HTML (HyperText Markup Language) is the standard language for creating webpages. HTML uses a variety of "tags" to structure content, such as headings, paragraphs, images, links, and lists. In this guide, we will cover some of the most commonly used HTML tags with examples.</p>
+        </section>
+
+        <!-- Headings Section -->
+        <section>
+            <h2>Headings</h2>
+            <p>Headings are used to define the structure of a page. HTML has six levels of headings, from <code>&lt;h1&gt;</code> (the largest) to <code>&lt;h6&gt;</code> (the smallest).</p>
+            <pre>
+&lt;h1&gt;This is a Heading 1&lt;/h1&gt;
+&lt;h2&gt;This is a Heading 2&lt;/h2&gt;
+&lt;h3&gt;This is a Heading 3&lt;/h3&gt;
+            </pre>
+            <p>Example:</p>
+            <pre>
+<h1>This is a Heading 1</h1>
+<h2>This is a Heading 2</h2>
+<h3>This is a Heading 3</h3>
+            </pre>
+        </section>
+
+        <!-- Paragraphs Section -->
+        <section>
+            <h2>Paragraphs</h2>
+            <p>Paragraphs are used to define blocks of text. In HTML, the <code>&lt;p&gt;</code> tag is used to create a paragraph.</p>
+            <pre>
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+            </pre>
+            <p>Example:</p>
+            <pre>
+<p>This is a paragraph of text.</p>
+            </pre>
+        </section>
+
+        <!-- Links Section -->
+        <section>
+            <h2>Links</h2>
+            <p>Links are used to connect one page to another or to external resources. The <code>&lt;a&gt;</code> tag is used to define a link. The <code>href</code> attribute specifies the destination of the link.</p>
+            <pre>
+&lt;a href="https://www.example.com"&gt;Click here to visit Example&lt;/a&gt;
+            </pre>
+            <p>Example:</p>
+            <pre>
+<a href="https://www.example.com">Click here to visit Example</a>
+            </pre>
+        </section>
+
+        <!-- Images Section -->
+        <section>
+            <h2>Images</h2>
+            <p>Images can be added using the <code>&lt;img&gt;</code> tag. The <code>src</code> attribute specifies the path to the image, and the <code>alt</code> attribute provides alternative text if the image is not loaded.</p>
+            <pre>
+&lt;img src="image.jpg" alt="Description of image"&gt;
+            </pre>
+            <p>Example:</p>
+            <pre>
+<img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            </pre>
+        </section>
+
+        <!-- Lists Section -->
+        <section>
+            <h2>Lists</h2>
+            <p>There are two types of lists in HTML: ordered lists and unordered lists.</p>
+
+            <h3>Unordered List</h3>
+            <p>An unordered list is a list of items that are not in any specific order. The <code>&lt;ul&gt;</code> tag is used to create an unordered list, and <code>&lt;li&gt;</code> tags are used for each list item.</p>
+            <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+            <p>Example:</p>
+            <pre>
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+            </pre>
+
+            <h3>Ordered List</h3>
+            <p>An ordered list is a list of items in a specific order. The <code>&lt;ol&gt;</code> tag is used to create an ordered list, and <code>&lt;li&gt;</code> tags are used for each list item.</p>
+            <pre>
+&lt;ol&gt;
+  &lt;li&gt;First Item&lt;/li&gt;
+  &lt;li&gt;Second Item&lt;/li&gt;
+  &lt;li&gt;Third Item&lt;/li&gt;
+&lt;/ol&gt;
+            </pre>
+            <p>Example:</p>
+            <pre>
+<ol>
+  <li>First Item</li>
+  <li>Second Item</li>
+  <li>Third Item</li>
+</ol>
+            </pre>
+        </section>
+
+        <!-- Tables Section -->
+        <section>
+            <h2>Tables</h2>
+            <p>Tables are used to display data in rows and columns. The <code>&lt;table&gt;</code> tag is used to create a table, <code>&lt;tr&gt;</code> for rows, <code>&lt;th&gt;</code> for table headers, and <code>&lt;td&gt;</code> for table data.</p>
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+            <p>Example:</p>
+            <pre>
+<table border="1">
+  <tr>
+    <th>Header 1</th>
+    <th>Header 2</th>
+  </tr>
+  <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+</table>
+            </pre>
+        </section>
+
+        <!-- Forms Section -->
+        <section>
+            <h2>Forms</h2>
+            <p>Forms are used to collect user input. The <code>&lt;form&gt;</code> tag is used to create a form. You can add different types of input elements, such as text fields, checkboxes, radio buttons, etc.</p>
+            <pre>
+&lt;form action="submit_form.php" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+  
+  &lt

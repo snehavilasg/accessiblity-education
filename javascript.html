@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics for Learners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>JavaScript Basics for Learners</h1>
+        </header>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>Introduction to JavaScript</h2>
+            <p>JavaScript is a programming language used to make web pages interactive. It allows you to manipulate the content of a web page, respond to user inputs, and perform complex actions. This tutorial will cover some basic JavaScript concepts.</p>
+        </section>
+
+        <!-- Variables Section -->
+        <section>
+            <h2>Variables</h2>
+            <p>Variables are used to store data values. You can declare a variable using the <code>let</code>, <code>const</code>, or <code>var</code> keywords.</p>
+            <pre>
+/* Declaring variables */
+let name = "John";       // String
+const age = 25;          // Number
+var isStudent = true;    // Boolean
+            </pre>
+            <p>In the above example, <code>name</code> is a string, <code>age</code> is a number, and <code>isStudent</code> is a boolean.</p>
+        </section>
+
+        <!-- Functions Section -->
+        <section>
+            <h2>Functions</h2>
+            <p>Functions are blocks of code designed to perform a particular task. You can define a function using the <code>function</code> keyword.</p>
+            <pre>
+/* Defining a function */
+function greet() {
+    console.log("Hello, World!");
+}
+
+/* Calling the function */
+greet();
+            </pre>
+            <p>In this example, we define a function called <code>greet</code> that logs "Hello, World!" to the console when called.</p>
+        </section>
+
+        <!-- Events Section -->
+        <section>
+            <h2>Events</h2>
+            <p>JavaScript can be used to interact with users through events, such as clicking a button. You can use event listeners to trigger functions when an event occurs.</p>
+            <pre>
+<!-- HTML -->
+<button id="clickButton">Click Me</button>
+
+<script>
+  document.getElementById("clickButton").addEventListener("click", function() {
+      alert("Button clicked!");
+  });
+</script>
+            </pre>
+            <p>When the button is clicked, the JavaScript function shows an alert with the message "Button clicked!".</p>
+        </section>
+
+        <!-- Loops Section -->
+        <section>
+            <h2>Loops</h2>
+            <p>Loops allow you to repeat a block of code multiple times. The most common types of loops in JavaScript are the <code>for</code> loop and the <code>while</code> loop.</p>
+
+            <h3>For Loop Example:</h3>
+            <pre>
+for (let i = 0; i < 5; i++) {
+    console.log(i);  // Prints 0, 1, 2, 3, 4
+}
+            </pre>
+
+            <h3>While Loop Example:</h3>
+            <pre>
+let i = 0;
+while (i < 5) {
+    console.log(i);  // Prints 0, 1, 2, 3, 4
+    i++;
+}
+            </pre>
+            <p>The <code>for</code> loop repeats a block of code a specific number of times, while the <code>while</code> loop continues as long as the condition is true.</p>
+        </section>
+
+        <!-- Conditionals Section -->
+        <section>
+            <h2>Conditionals</h2>
+            <p>Conditionals allow you to execute different code based on different conditions. You can use <code>if</code>, <code>else if</code>, and <code>else</code> to make decisions.</p>
+            <pre>
+/* Using if-else statements */
+let age = 20;
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+            </pre>
+            <p>In this example, the program checks if the <code>age</code> is greater than or equal to 18 and outputs the appropriate message.</p>
+        </section>
+
+        <!-- DOM Manipulation Section -->
+        <section>
+            <h2>DOM Manipulation</h2>
+            <p>The Document Object Model (DOM) represents the structure of an HTML document. JavaScript allows you to interact with and modify the DOM.</p>
+            <h3>Changing Text in HTML:</h3>
+            <pre>
+<!-- HTML -->
+<p id="demo">This is a paragraph.</p>
+
+<script>
+  document.getElementById("demo").innerHTML = "Hello, JavaScript!";
+</script>
+            </pre>
+            <p>The above code changes the content of the paragraph with <code>id="demo"</code> to "Hello, JavaScript!" using JavaScript.</p>
+        </section>
+
+        <!-- Interactive Button Example -->
+        <section>
+            <h2>Interactive Button Example</h2>
+            <p>Click the button below to see JavaScript in action:</p>
+            <button class="button" id="changeColorButton">Change Background Color</button>
+            <script>
+                document.getElementById("changeColorButton").addEventListener("click", function() {
+                    document.body.style.backgroundColor = "lightblue";
+                });
+            </script>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 JavaScript Basics for Learners. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

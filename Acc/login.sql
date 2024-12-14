@@ -1,0 +1,5 @@
+CREATE TABLE login (
+ email VARCHAR(255) PRIMARY KEY,
+ password VARCHAR(255) NOT NULL,
+forgot-password VARCHAR(255) NOT NULL
+);

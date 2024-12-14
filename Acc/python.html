@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Python Knowledge</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for the page */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Section styling */
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Code block styling */
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Basic Python Knowledge</h1>
+        </header>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>Introduction to Python</h2>
+            <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used for web development, data science, automation, and artificial intelligence.</p>
+        </section>
+
+        <!-- Variables and Data Types Section -->
+        <section>
+            <h2>Variables and Data Types</h2>
+            <p>Variables in Python are used to store data. Python has several data types, including:</p>
+            <ul>
+                <li><strong>Integers</strong>: Whole numbers (e.g., 10, 42)</li>
+                <li><strong>Floats</strong>: Numbers with decimal points (e.g., 3.14, 0.5)</li>
+                <li><strong>Strings</strong>: Text (e.g., "Hello", 'Python')</li>
+                <li><strong>Booleans</strong>: True or False</li>
+            </ul>
+            <p>Here's an example of defining variables:</p>
+            <pre>
+# Example of defining variables
+name = "Alice"    # String
+age = 25          # Integer
+height = 5.6      # Float
+is_student = True # Boolean
+            </pre>
+        </section>
+
+        <!-- Control Flow Section -->
+        <section>
+            <h2>Control Flow: Conditional Statements</h2>
+            <p>Conditional statements allow us to control the flow of our program based on certain conditions. The most commonly used conditionals are <strong>if</strong>, <strong>elif</strong>, and <strong>else</strong>.</p>
+            <pre>
+# Example of if-elif-else
+age = 18
+
+if age < 18:
+    print("You are a minor.")
+elif age == 18:
+    print("You are 18 years old.")
+else:
+    print("You are an adult.")
+            </pre>
+        </section>
+
+        <!-- Loops Section -->
+        <section>
+            <h2>Loops: Repeating Actions</h2>
+            <p>Loops allow us to repeat actions multiple times. Python has two main types of loops: <strong>for loops</strong> and <strong>while loops</strong>.</p>
+            <h3>For Loop Example</h3>
+            <pre>
+# Example of a for loop
+for i in range(1, 6):
+    print(i)  # Output: 1, 2, 3, 4, 5
+            </pre>
+            <h3>While Loop Example</h3>
+            <pre>
+# Example of a while loop
+count = 1
+while count <= 5:
+    print(count)  # Output: 1, 2, 3, 4, 5
+    count += 1
+            </pre>
+        </section>
+
+        <!-- Functions Section -->
+        <section>
+            <h2>Functions</h2>
+            <p>A function is a block of code that only runs when it is called. It can take input (called parameters) and return an output.</p>
+            <pre>
+# Example of a function
+def greet(name):
+    return "Hello, " + name
+
+print(greet("Alice"))  # Output: Hello, Alice
+            </pre>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section>
+            <h2>Conclusion</h2>
+            <p>Python is a versatile and beginner-friendly language. With the basics of variables, data types, control flow, loops, and functions, you're ready to start writing your own Python programs!</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Python Basics</p>
+        </footer>
+    </div>
+
+</body>
+</html>

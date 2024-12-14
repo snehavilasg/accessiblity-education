@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            border: none;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .disability-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Page</h2>
+        <form id="registrationForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="area">Do you live in a rural or urban area?</label>
+            <select id="area" name="area" required>
+                <option value="Rural">Rural</option>
+                <option value="Urban">Urban</option>
+            </select>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="income">Annual Income</label>
+            <input type="int" id="income" name="income" required>
+
+           
+            <label for="disability">Do you have any disability?</label>
+            <input type="disability" id="disability" name="disability" required>
+
+        
+           
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="button" id="registerBtn">Register</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const disabilityDropdown = document.getElementById('disability');
+            const disabilitySection = document.getElementById('disability-section');
+            const registerBtn = document.getElementById('registerBtn');
+
+            // Show/Hide disability section based on the selected disability type
+            disabilityDropdown.addEventListener('change', function() {
+                if (this.value === 'Physical') {
+                    disabilitySection.style.display = 'block';
+                } else {
+                    disabilitySection.style.display = 'none';
+                }
+            });
+
+            // Handle registration form submission
+            registerBtn.addEventListener('click', function() {
+                const form = document.getElementById('registrationForm');
+                if (form.reportValidity()) {
+                    alert('Registration Successful!');
+                    form.reset(); // Reset the form after successful registration
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #007BFF;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            color: #333;
+        }
+
+        .main-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .course {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .course img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .course h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .course p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .course button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .course button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>EduLearn</h1>
+        <div>
+            <a href="/home">Home</a>
+            <a href="about.html">About</a>
+            <a href="/profile">Profile</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome to EduLearn</h1>
+        <p>Explore our courses and enhance your skills. Choose a course below to get started.</p>
+
+        <div class="courses">
+            <div class="course">
+                <img src="\html.jpg" alt="HTML Course">
+                <h3>HTML</h3>
+                <p>Learn the building blocks of the web and how to structure web pages effectively using HTML.</p>
+                
+                <button><a href="html.html">Enroll Now </a></button>
+            </div>
+            <div class="course">
+                <img src="\css.jpg" alt="CSS Course">
+                <h3>CSS</h3>
+                <p>Master styling techniques to design visually appealing and responsive web pages.</p>
+                <button><a href="css.html">Enroll Now </a></button>
+            </div>
+            <div class="course">
+                <img src="\javascript.jpg" alt="JavaScript Course">
+                <h3>JavaScript</h3>
+                <p>Enhance your websites with dynamic and interactive elements through JavaScript programming.</p>
+                <button><a href="javascript.html">Enroll Now </a></button>
+            </div>
+            <div class="course">
+                <img src="\python.jpg" alt="Python Course">
+                <h3>Python</h3>
+                <p>Get hands-on experience with Python and learn how to solve real-world problems.</p>
+                <button><a href="python.html">Enroll Now </a></button>
+            </div>
+            <div class="course">
+                <img src="\java.jpg" alt="Java Course">
+                <h3>Java</h3>
+                <p>Dive deep into object-oriented programming with Java and build robust applications.</p>
+                <button><a href="java.html">Enroll Now </a></button>
+            </div>
+            <div class="course">
+                <img src="\sql.png" alt="SQL Course">
+                <h3>SQL</h3>
+                <p>Learn how to manage databases effectively and perform complex queries using SQL.</p>
+                <button><a href="sql.html">Enroll Now </a></button>
+            </div>
+            <div class="course">
+                <img src="\php.jpg" alt="PHP Course">
+                <h3>PHP</h3>
+                <p>Develop dynamic and data-driven web applications using PHP.</p>
+                <button><a href="php.html">Enroll Now </a></button>
+            </div>
+            <div class="course">
+                <img src="\c-sharp.jpg" alt="C# Course">
+                <h3>C-sharp (C#)</h3>
+                <p>Build modern applications with C#, a versatile programming language for web and desktop development.</p>
+                <button><a href="c-sharp.html">Enroll Now </a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

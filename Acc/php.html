@@ -1,0 +1,235 @@
+<?php
+// Simple PHP Code to Demonstrate Basic Concepts
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Basics for Learners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>PHP Basics for Learners</h1>
+        </header>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>What is PHP?</h2>
+            <p>PHP is a popular server-side scripting language used for web development. It is commonly embedded in HTML to create dynamic content, interact with databases, and handle user input on web pages.</p>
+        </section>
+
+        <!-- PHP Syntax Section -->
+        <section>
+            <h2>PHP Syntax</h2>
+            <p>PHP scripts start with <code>&lt;?php</code> and end with <code>?&gt;</code>. You can mix HTML and PHP within a single file. PHP code is executed on the server, and the result is sent to the browser as plain HTML.</p>
+            
+            <pre>
+&lt;?php
+    echo "Hello, world!";
+?&gt;
+            </pre>
+            <p>The code above outputs "Hello, world!" to the browser.</p>
+        </section>
+
+        <!-- Variables and Data Types Section -->
+        <section>
+            <h2>PHP Variables and Data Types</h2>
+            <p>In PHP, variables are prefixed with a <code>$</code> sign. PHP supports several data types such as strings, integers, floats, booleans, arrays, etc.</p>
+            <pre>
+&lt;?php
+$name = "John";       // String
+$age = 25;            // Integer
+$isStudent = true;    // Boolean
+$height = 5.9;        // Float
+
+echo "Name: " . $name;
+echo "Age: " . $age;
+echo "Student: " . $isStudent;
+?&gt;
+            </pre>
+            <p>This code demonstrates variable declaration and outputs the values using <code>echo</code>.</p>
+        </section>
+
+        <!-- Conditionals Section -->
+        <section>
+            <h2>PHP Conditionals</h2>
+            <p>PHP allows you to use <code>if</code>, <code>else</code>, and <code>elseif</code> statements to control the flow of your program.</p>
+            <pre>
+&lt;?php
+$age = 18;
+
+if ($age >= 18) {
+    echo "You are an adult.";
+} else {
+    echo "You are a minor.";
+}
+?&gt;
+            </pre>
+            <p>This example checks if a user is an adult or a minor based on their age.</p>
+        </section>
+
+        <!-- Loops Section -->
+        <section>
+            <h2>PHP Loops</h2>
+            <p>Loops allow you to execute a block of code multiple times. PHP supports <code>for</code>, <code>while</code>, and <code>foreach</code> loops.</p>
+
+            <h3>For Loop Example</h3>
+            <pre>
+&lt;?php
+for ($i = 0; $i < 5; $i++) {
+    echo $i . "&lt;br&gt;";
+}
+?&gt;
+            </pre>
+            <p>This <code>for</code> loop prints numbers from 0 to 4.</p>
+
+            <h3>While Loop Example</h3>
+            <pre>
+&lt;?php
+$i = 0;
+while ($i < 5) {
+    echo $i . "&lt;br&gt;";
+    $i++;
+}
+?&gt;
+            </pre>
+            <p>This <code>while</code> loop also prints numbers from 0 to 4.</p>
+        </section>
+
+        <!-- Arrays Section -->
+        <section>
+            <h2>PHP Arrays</h2>
+            <p>Arrays in PHP are used to store multiple values in a single variable. There are indexed arrays and associative arrays.</p>
+
+            <h3>Indexed Array Example</h3>
+            <pre>
+&lt;?php
+$fruits = array("Apple", "Banana", "Orange");
+echo $fruits[0]; // Outputs "Apple"
+?&gt;
+            </pre>
+
+            <h3>Associative Array Example</h3>
+            <pre>
+&lt;?php
+$person = array("name" => "John", "age" => 25, "city" => "New York");
+echo $person["name"]; // Outputs "John"
+?&gt;
+            </pre>
+        </section>
+
+        <!-- PHP Functions Section -->
+        <section>
+            <h2>PHP Functions</h2>
+            <p>Functions allow you to reuse code. You can define your own functions in PHP using the <code>function</code> keyword.</p>
+            <pre>
+&lt;?php
+function greet($name) {
+    return "Hello, " . $name;
+}
+
+echo greet("John"); // Outputs "Hello, John"
+?&gt;
+            </pre>
+            <p>This example defines a function <code>greet()</code> that takes a parameter and returns a greeting message.</p>
+        </section>
+
+        <!-- PHP Form Section -->
+        <section>
+            <h2>PHP Form Handling</h2>
+            <p>You can use PHP to handle user input from forms. Here's an example of how to handle a simple form submission:</p>
+
+            <form method="POST" action="">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="age">Your Age:</label>
+                <input type="number" id="age" name="age" required>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $name = $_POST['name'];
+                $age = $_POST['age'];
+                echo "<p>Form Submitted! Your name is $name and you are $age years old.</p>";
+            }
+            ?>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 PHP Basics for Learners. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

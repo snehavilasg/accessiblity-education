@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .edit-profile-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .edit-profile-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .edit-profile-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edit-profile-container label {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .edit-profile-container input {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#" class="logo">MyWebsite</a>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </div>
+
+    <!-- Edit Profile Section -->
+    <div class="edit-profile-container">
+        <h2>Edit Profile</h2>
+        <form action="update-profile.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="John Doe" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="john.doe@example.com" required>
+
+            <!-- Add other fields here -->
+
+            <button type="submit" class="btn">Update Profile</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics for Learners</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        /* Styling the link for the page */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>CSS Basics for Learners</h1>
+        </header>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>Introduction to CSS</h2>
+            <p>CSS (Cascading Style Sheets) is a language used to describe the presentation of a document written in HTML. It controls the layout of multiple web pages in a website. CSS allows you to style the elements on your webpage, such as setting the colors, fonts, margins, and spacing.</p>
+        </section>
+
+        <!-- CSS Syntax Section -->
+        <section>
+            <h2>CSS Syntax</h2>
+            <p>CSS rules are made up of selectors and declarations. A CSS rule consists of a selector followed by a declaration block. The declaration block contains one or more declarations, each made up of a property and a value.</p>
+            <pre>
+/* CSS Rule Syntax */
+selector {
+    property: value;
+}
+
+/* Example: */
+h1 {
+    color: blue;
+}
+            </pre>
+            <p>In the example above, the <code>h1</code> selector is targeted, and the color property is set to blue.</p>
+        </section>
+
+        <!-- Selectors Section -->
+        <section>
+            <h2>CSS Selectors</h2>
+            <p>CSS selectors are used to select the HTML elements that you want to style. There are different types of selectors:</p>
+            <ul>
+                <li><strong>Element Selector</strong>: Targets HTML elements by their tag name.</li>
+                <li><strong>Class Selector</strong>: Targets elements with a specific class attribute (prefixed with <code>.</code>).</li>
+                <li><strong>ID Selector</strong>: Targets an element with a specific ID attribute (prefixed with <code>#</code>).</li>
+                <li><strong>Universal Selector</strong>: Targets all elements on the page (using <code>*</code>).</li>
+            </ul>
+
+            <h3>Example:</h3>
+            <pre>
+/* Element selector */
+h2 {
+    color: green;
+}
+
+/* Class selector */
+.button {
+    background-color: red;
+}
+
+/* ID selector */
+#header {
+    font-size: 2rem;
+}
+            </pre>
+            <p>In the above example:</p>
+            <ul>
+                <li>The <code>h2</code> element will be styled with green color.</li>
+                <li>Any element with the <code>button</code> class will have a red background.</li>
+                <li>The element with the <code>id="header"</code> will have a font size of 2rem.</li>
+            </ul>
+        </section>
+
+        <!-- Colors and Backgrounds Section -->
+        <section>
+            <h2>Colors and Backgrounds</h2>
+            <p>CSS allows you to set colors and backgrounds for your webpage elements. You can use named colors, hex color codes, RGB, or HSL values.</p>
+
+            <h3>Example of Setting Background Color:</h3>
+            <pre>
+/* Using a color name */
+body {
+    background-color: lightblue;
+}
+
+/* Using a hex code */
+h1 {
+    color: #ff6347; /* Tomato */
+}
+
+/* Using RGB */
+p {
+    color: rgb(0, 128, 0); /* Green */
+}
+            </pre>
+            <p>In this example, we set the background color of the <code>body</code> element to light blue, the <code>h1</code> color to tomato, and the <code>p</code> color to green using RGB.</p>
+        </section>
+
+        <!-- Text Styling Section -->
+        <section>
+            <h2>Text Styling</h2>
+            <p>CSS provides several properties for styling text, such as changing the font, size, weight, and style. Here are a few examples:</p>
+            <pre>
+/* Font properties */
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Text properties */
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+            </pre>
+            <p>In this example:</p>
+            <ul>
+                <li>The <code>p</code> elements have their font set to Arial, with a size of 1.2rem, and bold text.</li>
+                <li>The <code>h3</code> elements are centered and have underlined text.</li>
+            </ul>
+        </section>
+
+        <!-- Layout and Positioning Section -->
+        <section>
+            <h2>Layout and Positioning</h2>
+            <p>CSS allows you to control the layout and positioning of elements. Some of the key properties include:</p>
+            <ul>
+                <li><strong>margin</strong>: Controls the space outside an element.</li>
+                <li><strong>padding</strong>: Controls the space inside an element.</li>
+                <li><strong>display</strong>: Specifies how an element is displayed (block, inline, flex, grid, etc.).</li>
+                <li><strong>position</strong>: Specifies how an element is positioned (static, relative, absolute, fixed).</li>
+            </ul>
+
+            <h3>Example:</h3>
+            <pre>
+/* Margin and Padding */
+div {
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Positioning */
+#box {
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+            </pre>
+            <p>In this example:</p>
+            <ul>
+                <li>The <code>div</code> elements have a margin of 20px and padding of 10px.</li>
+                <li>The element with <code>id="box"</code> is positioned 50px from the top and 30px from the left of its normal position.</li>
+            </ul>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 CSS Basics for Learners. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

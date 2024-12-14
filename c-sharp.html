@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Basics for Learners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>C# Basics for Learners</h1>
+        </header>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>What is C#?</h2>
+            <p>C# (pronounced C-sharp) is a modern, object-oriented programming language developed by Microsoft. It is primarily used for developing Windows applications, web applications, and games (using the Unity game engine).</p>
+        </section>
+
+        <!-- C# Syntax Section -->
+        <section>
+            <h2>C# Syntax</h2>
+            <p>C# syntax is similar to other C-based languages such as C++, Java, and JavaScript. Here's an example of the basic structure of a C# program:</p>
+            <pre>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+            </pre>
+            <p>This simple program outputs "Hello, World!" to the console.</p>
+        </section>
+
+        <!-- Variables and Data Types Section -->
+        <section>
+            <h2>C# Variables and Data Types</h2>
+            <p>In C#, variables are used to store data, and each variable has a data type (such as int, string, float, etc.).</p>
+            <pre>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int age = 25;           // Integer
+        double height = 5.9;    // Double (floating-point)
+        string name = "John";   // String
+        bool isStudent = true;  // Boolean
+
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Age: " + age);
+        Console.WriteLine("Height: " + height);
+        Console.WriteLine("Student: " + isStudent);
+    }
+}
+            </pre>
+            <p>This program demonstrates different types of variables and how to output them using the <code>Console.WriteLine</code> method.</p>
+        </section>
+
+        <!-- Conditional Statements Section -->
+        <section>
+            <h2>C# Conditional Statements</h2>
+            <p>In C#, you can use <code>if</code>, <code>else if</code>, and <code>else</code> statements to make decisions in your program based on conditions.</p>
+            <pre>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int age = 18;
+
+        if (age >= 18)
+        {
+            Console.WriteLine("You are an adult.");
+        }
+        else
+        {
+            Console.WriteLine("You are a minor.");
+        }
+    }
+}
+            </pre>
+            <p>This program checks if the user is an adult (18 or older) and prints the appropriate message.</p>
+        </section>
+
+        <!-- Loops Section -->
+        <section>
+            <h2>C# Loops</h2>
+            <p>Loops allow you to execute a block of code multiple times. C# supports several types of loops, including <code>for</code>, <code>while</code>, and <code>foreach</code>.</p>
+
+            <h3>For Loop Example</h3>
+            <pre>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+            </pre>
+            <p>This <code>for</code> loop prints the numbers from 0 to 4.</p>
+
+            <h3>While Loop Example</h3>
+            <pre>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int i = 0;
+        while (i < 5)
+        {
+            Console.WriteLine(i);
+            i++;
+        }
+    }
+}
+            </pre>
+            <p>This <code>while</code> loop also prints the numbers from 0 to 4.</p>
+        </section>
+
+        <!-- Arrays Section -->
+        <section>
+            <h2>C# Arrays</h2>
+            <p>Arrays in C# are used to store multiple values in a single variable. Here's an example of how to declare and use arrays:</p>
+            <pre>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+    }
+}
+            </pre>
+            <p>This program uses a <code>foreach</code> loop to print all elements of the <code>numbers</code> array.</p>
+        </section>
+
+        <!-- Functions Section -->
+        <section>
+            <h2>C# Functions</h2>
+            <p>Functions (or methods) in C# are used to group reusable code into a single unit. Functions can take parameters and return values.</p>
+            <pre>
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine(Sum(5, 3));
+    }
+
+    static int Sum(int a, int b)
+    {
+        return a + b;
+    }
+}
+            </pre>
+            <p>This program defines a function called <code>Sum</code> that takes two integers as parameters and returns their sum.</p>
+        </section>
+
+        <!-- Classes Section -->
+        <section>
+            <h2>C# Classes</h2>
+            <p>Classes in C# are blueprints for creating objects. Classes define properties and methods that the objects created from them can have.</p>
+            <pre>
+using System;
+
+class Person
+{
+    public string Name;
+    public int Age;
+
+    public void Greet()
+    {
+        Console.WriteLine("Hello, my name is " + Name);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Person person = new Person();
+        person.Name = "John";
+        person.Age = 30;
+        person.Greet();
+    }
+}
+            </pre>
+            <p>This example defines a <code>Person</code> class with two properties, <code>Name</code> an
